@@ -1,11 +1,11 @@
-package com.exercises.auxiliar.classes;
+package com.exercises.auxiliar.classes.claseshijas;
 
-/**
- * Created by David on 02/05/2015.
- */
+import com.exercises.auxiliar.classes.Articulo;
+
+
 public class Book extends Articulo {
 
-    private String autor;
+    private Autor autor;
     private String isbn;
     private Integer paginas;
 
@@ -14,11 +14,11 @@ public class Book extends Articulo {
 
     }
 
-    public String getAutor() {
+    public Autor getAutor() {
         return autor;
     }
 
-    public void setAutor(String autor) {
+    public void setAutor(Autor autor) {
         this.autor = autor;
     }
 
@@ -41,6 +41,6 @@ public class Book extends Articulo {
 
     @Override
     public String toString() {
-        return super.toString() + "[ " + autor + " , " + isbn + " , " + paginas + " ]";
+        return super.toString() + "[ " + getAutor() + " , " + getIsbn() + " , " + getPaginas() + " ]";
     }
 }

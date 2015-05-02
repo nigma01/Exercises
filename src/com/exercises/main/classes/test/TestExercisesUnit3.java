@@ -1,13 +1,17 @@
 package com.exercises.main.classes.test;
 
 import com.exercises.auxiliar.classes.Articulo;
-import com.exercises.auxiliar.classes.Book;
-import com.exercises.auxiliar.classes.Dvd;
+import com.exercises.auxiliar.classes.claseshijas.Autor;
+import com.exercises.auxiliar.classes.claseshijas.Book;
+import com.exercises.auxiliar.classes.claseshijas.Dvd;
+import com.exercises.auxiliar.classes.claseshijas.Realizador;
+
+import java.util.Date;
 
 /**
  * Created by David on 02/05/2015.
  */
-public class TestExercises2_3Unit3 {
+public class TestExercisesUnit3 {
 
     public static void main(String... args){
 
@@ -16,19 +20,20 @@ public class TestExercises2_3Unit3 {
         articulo.setNombre("Articulo1");
         articulo.setPrecio(125.56);
         articulo.setReferencia("2345B");
+        printDatos(articulo);
 
-        System.out.println(articulo.toString());
 
         Book book = new Book();
 
         book.setNombre("Libro1");
         book.setPrecio(125.56);
         book.setReferencia("2345B");
-        book.setAutor("Autor1");
+        Autor autor = new Autor("Autor1", "Apellidos1", new Date());
+        book.setAutor(autor);
         book.setIsbn("256478nm2544");
         book.setPaginas(125);
+        printDatos(book);
 
-        System.out.println(book.toString());
 
 
         Dvd dvd = new Dvd();
@@ -36,9 +41,14 @@ public class TestExercises2_3Unit3 {
         dvd.setNombre("Dvd1");
         dvd.setPrecio(125.56);
         dvd.setReferencia("2346");
-        dvd.setRealizador("Realizador 1");
+        Realizador realizador = new Realizador("Realizador1", "Apellidos1", new Date());
+        dvd.setRealizador(realizador);
         dvd.setDuracion("1h 30m");
+        printDatos(dvd);
 
-        System.out.println(dvd.toString());
+    }
+
+    private static  void printDatos(Articulo a){
+        System.out.println(a.toString());
     }
 }

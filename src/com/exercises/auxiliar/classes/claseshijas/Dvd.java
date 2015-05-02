@@ -1,19 +1,21 @@
-package com.exercises.auxiliar.classes;
+package com.exercises.auxiliar.classes.claseshijas;
 
+
+import com.exercises.auxiliar.classes.Articulo;
 
 public class Dvd extends Articulo {
 
-    private String realizador;
+    private Realizador realizador;
     private String duracion;
 
     public Dvd() {
     }
 
-    public String getRealizador() {
+    public Realizador getRealizador() {
         return realizador;
     }
 
-    public void setRealizador(String realizador) {
+    public void setRealizador(Realizador realizador) {
         this.realizador = realizador;
     }
 
@@ -27,6 +29,6 @@ public class Dvd extends Articulo {
 
     @Override
     public String toString() {
-        return super.toString() + "[ " + realizador + " , " + duracion  + " ]";
+        return super.toString() + "[ " + getRealizador() + " , " + getDuracion()  + " ]";
     }
 }
